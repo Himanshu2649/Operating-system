@@ -1,0 +1,132 @@
+.search-menu {
+  width: 38vw;
+  height: 90vh;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(30px);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+}
+
+.search-menu .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: white;
+  height: 5vh;
+  margin-bottom: 2rem;
+  border-radius: 0.3rem;
+  border-bottom: 2px solid blue;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+.search-menu .search i {
+  font-size: 1.5rem;
+}
+
+.search-menu .searchbar {
+  width: 85%;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.search-menu .filters {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 22px;
+  font-size: 14px;
+}
+
+.search-menu .filters span {
+  cursor: pointer;
+  opacity: 0.7;
+  position: relative;
+}
+
+.search-menu .filters .active {
+  opacity: 1;
+  font-weight: 500;
+}
+
+.search-menu .filters .active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #0078d7;
+  border-radius: 20px;
+}
+
+.search-menu .section {
+  margin-bottom: 25px;
+}
+
+.search-menu .section-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+.search-menu .top-apps {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 12px; */
+  flex-wrap: wrap;
+}
+
+.search-menu .app {
+  width: 7vw;
+  text-align: center;
+  cursor: pointer;
+}
+
+.search-menu .app img {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 6px;
+}
+
+.search-menu .app p {
+  font-size: 12px;
+  color: #000;
+}
+
+.search-menu .section {
+  display: flex;
+  flex-direction: column;
+  /* gap: 1rem; */
+}
+
+.search-menu .quick-search {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #000;
+  cursor: pointer;
+  font-size: 1.1rem;
+  height: 5vh;
+  padding: 0rem 0.5rem;
+}
+
+.search-menu .quick-search:hover {
+  background-color: white;
+}

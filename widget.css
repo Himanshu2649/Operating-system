@@ -1,0 +1,250 @@
+.os-widget {
+  height: 40vh;
+  width: 25vw;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+  position: fixed;
+  left: 20px;
+  bottom: 8%;
+  z-index: 5000;
+  opacity: 1;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.widget-section {
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  color: black;
+}
+
+.widget-section:last-child {
+  border-bottom: none;
+}
+
+.calendar h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  margin: 0;
+}
+
+.weather h4 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  color: black;
+  font-weight: 600;
+}
+
+.weather p {
+  font-size: 14px;
+  color: black;
+  margin: 3px 0;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.weather-icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.weather-details {
+  text-align: center;
+}
+
+.weather-details h4 {
+  font-size: 24px;
+  margin: 4px 0;
+  color: black;
+}
+
+.weather-details p {
+  font-size: 14px;
+  color: black;
+  margin: 2px 0;
+}
+
+/* 📦 Wi-Fi Panel */
+#wifiPanel {
+  position: absolute;
+  bottom: 60px;
+  right: 20px;
+  width: 320px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  padding: 16px;
+  z-index: 1000;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: none;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* 🔺 Header */
+#wifiPanel .wifi-header {
+  font-weight: 600;
+  font-size: 16px;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #444;
+}
+
+/* 🔄 Toggle Area */
+#wifiPanel .wifi-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+/* 🟢 Toggle Switch */
+#wifiPanel .switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+#wifiPanel .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#wifiPanel .slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #555;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+#wifiPanel .slider .circle {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+/* 📡 Network List */
+#wifiPanel .network-list {
+  display: block;
+}
+
+#wifiPanel .network {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+#wifiPanel .network:hover {
+  background-color: #2a2a2a;
+}
+
+/* 🔘 Buttons */
+#wifiPanel .connect-btn {
+  background: #3c3c3c;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#wifiPanel .connect-btn:hover {
+  background: #4a90e2;
+}
+
+/* ! Sound Panel */
+.sound-panel {
+  position: absolute;
+  bottom: 60px;
+  right: 80px;
+  width: 260px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  display: none;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.sound-header {
+  font-weight: bold;
+  font-size: 14px;
+  border-bottom: 1px solid gray;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+.sound-body {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.volume-icon {
+  font-size: 24px;
+}
+
+#volumeSlider {
+  flex: 1;
+  accent-color: #2196f3;
+  cursor: pointer;
+}
+
+/* ! Upper Arrow */
+.system-tray {
+  position: absolute;
+  bottom: 55px;
+  right: 140px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 10px;
+  width: auto;
+  display: flex;
+  /* flex-direction: column; */
+  gap: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  z-index: 2000;
+}
+
+.tray-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  cursor: pointer;
+}

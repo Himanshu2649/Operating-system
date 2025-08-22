@@ -1,0 +1,116 @@
+#camera {
+  width: 50vw;
+  height: 70vh;
+  background: #0e0e0e;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+  position: relative;
+  z-index: 3000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.camera-header {
+  background: #1e1e1e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid #333;
+}
+
+.camera-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.camera-logo img {
+  width: 20px;
+  height: 20px;
+}
+
+.camera-logo p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.camera-controls i {
+  font-size: 18px;
+  margin-left: 12px;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.camera-controls i:hover {
+  color: white;
+}
+
+.camera-body {
+  flex: 1;
+  position: relative;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#camFeed {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.camera-bottom-bar {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.capture-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.capture-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.capture-btn img {
+  width: 32px;
+  height: 32px;
+}
+
+.captured-photo {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 100px;
+  height: auto;
+  border: 2px solid #fff;
+  border-radius: 6px;
+}

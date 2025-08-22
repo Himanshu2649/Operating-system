@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .edgeapp {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            /* z-index: 500000; */
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+        }
+
+            
+        .edge-toolbar {
+            /* margin-top: 2rem; */
+            display: flex;
+            align-items: center;
+            padding: 6px 12px;
+            gap: 8px;
+            background: #f1f1f1;
+        }
+
+        .edge-toolbar input {
+            flex: 1;
+            padding: 6px 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .edgeappIframeWrapper {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .edgeappIframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="edgeapp">
+        
+
+        <div class="edge-toolbar">
+            <i class="ri-arrow-left-s-line" id="edge-back"></i>
+            <i class="ri-arrow-right-s-line" id="edge-forward"></i>
+            <i class="ri-refresh-line" id="edge-reload"></i>
+
+            <input type="text" class="edgeurlbar" id="edge-url" placeholder="Search or enter web address" />
+
+            <i class="ri-star-line"></i>
+            <i class="ri-user-3-line"></i>
+        </div>
+
+        <div class="edgeappIframeWrapper">
+            <iframe class="edgeappIframe" id="edgeIframe" src="https://example.com"></iframe>
+        </div>
+    </div>
+
+
+
+    <script>
+        const edgeURL = document.getElementById("edge-url");
+        const edgeIframe = document.getElementById("edgeIframe");
+
+        document.getElementById("searchForm")?.addEventListener("submit", (e) => {
+            e.preventDefault();
+            loadURL(edgeURL.value);
+        });
+
+        edgeURL.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") {
+                loadURL(edgeURL.value);
+            }
+        });
+
+        document.getElementById("edge-reload").addEventListener("click", () => {
+            edgeIframe.src = edgeIframe.src;
+        });
+
+        function loadURL(url) {
+            if (!url.startsWith("http://") && !url.startsWith("https://")) {
+                url = "https://www.bing.com/search?q=" + encodeURIComponent(url);
+            }
+
+            edgeIframe.src = url;
+            edgeURL.value = url;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

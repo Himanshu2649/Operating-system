@@ -1,0 +1,213 @@
+.solitair {
+  background-color: rgb(72, 72, 165);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 4000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.upperheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: white;
+}
+
+.upperheader p {
+  font-weight: 100;
+  letter-spacing: -0.05rem;
+}
+
+.upperheader .icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.upperheader .icons #close:hover {
+  background-color: red;
+}
+
+header {
+  background-color: #001f3f;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: space-between;
+}
+
+.menu-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: white;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.subtitle {
+  font-weight: normal;
+  margin-left: 0.5rem;
+  color: white;
+}
+
+.main-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  color: white;
+  justify-content: center;
+}
+
+.solitaire-collection {
+  flex: 1;
+  text-align: center;
+  min-width: 250px;
+}
+
+.solitaire-collection h3 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  line-height: 2.2rem;
+}
+
+.solitaire-collection img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 10px;
+}
+
+.game-grid {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.game-card {
+  background: #fff;
+  color: black;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+  height: 30vh;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-card:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.game-card img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.game-card .label {
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.casual-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 2rem 0 1rem 0;
+  color: white;
+  text-align: center;
+}
+
+.casual-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 992px) {
+  .main-area {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .game-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .casual-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .solitaire-collection h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .game-card {
+    height: auto;
+  }
+
+  .game-card img {
+    height: 140px;
+  }
+
+  .game-card .label {
+    font-size: 0.9rem;
+  }
+
+  .welcome {
+    font-size: 1.2rem;
+  }
+
+  .subtitle {
+    display: block;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .solitaire-collection h3 {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  }
+
+  .upperheader p {
+    font-size: 0.85rem;
+  }
+
+  .game-card img {
+    height: 120px;
+  }
+}

@@ -1,0 +1,100 @@
+.cmd-window {
+  width: 50vw;
+  height: 70vh;
+  background-color: black;
+  color: white;
+  font-family: "Courier New", monospace;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.window-cmd {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #444;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  z-index: 4000;
+}
+
+.cmd-header {
+  background-color: #0c0c0c;
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.cmd-header .icons{
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cmd-header .icons i{
+    font-size: 1.2rem;
+    
+}
+
+.cmd-header .icons #close:hover{
+    background-color: red;
+}
+
+.cmd-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  color: #dcdcdc;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.cmd-body pre {
+  white-space: pre-wrap;
+}
+
+.cmd-input-line {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.cmd-input-line span {
+  color: #00ff00;
+}
+
+.cmd-input-line input {
+  background: transparent;
+  border: none;
+  color: #dcdcdc;
+  font: inherit;
+  outline: none;
+  flex: 1;
+}
+
+/* Scrollbar style */
+.cmd-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cmd-body::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 10px;
+}
